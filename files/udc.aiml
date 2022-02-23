@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>*</pattern>
+        <template>I didn't quite catch that response..</template>
+    </category>
+    
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            Hello! I am slushbot! I am here to help you determine which field of computer science that best suits you! 
+            Before we begin, what is your name? (Start with "My name is")
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <template>
+            Hi <set name = "username"><star /></set>! 
+            Can you choose which of these you are most proficient at? You can also type these
+            if you prefer to talk with me! :)
+            <button>
+                <text>Programming</text>
+                <postback>PROGRAMMING</postback>
+            </button>
+            <button>
+                <text>Leadership</text>
+                <postback>LEADERSHIP</postback>
+            </button>
+            <button>
+                <text>Technology</text>
+                <postback>Technology</postback>
+            </button>
+            
+        </template>
+        
+    </category>
+    
+    
+    <!--Programming Intro-->
+    <category>
+        <pattern>PROGRAMMING</pattern>
+        <template>
+            So you like programming? Great! What type of programming do you like?
+            <button>
+                <text>Designing the overall user experience</text>
+                <postback>frontendmore</postback>
+            </button>
+            <button>
+                <text>Developing features and integration with other Apps</text>
+                <postback>backendmore</postback>
+            </button>
+        </template>
+    </category>
+    
+    <!--Programming Front End Dev -->
+    <category>
+        <pattern>frontendmore</pattern>
+        <template>
+            Sounds like you would love being a Front End Software Developer! They use their
+            knowledge in Javascript, HTML, and CSS to design interfaces that are used to interact with
+            all types of software. Below is a link to more information!
+            <card>
+                <title>What is a Front End Software Developer?</title>
+                <image>https://www.yalwa.info//images/jobicons/it.svg</image>
+                <button>
+                    <text>Learn More</text>
+                    <url>https://www.coursera.org/articles/front-end-developer</url>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <!--Programming Back End Dev -->
+    <category>
+        <pattern>backendmore</pattern>
+        <template>
+            Sounds like you would love being a Back End Software Developer! They use their knowledge
+            of programming languages like Java, SQL and Python to build features in software that
+            store data as well as interact with other applications. Below is link to more information!
+            <card>
+                <title>What is a Back End Software Developer?</title>
+                <image>https://www.yalwa.info/images/jobbenefits/benefit7.svg</image>
+                <button>
+                    <text>Learn More</text>
+                    <url>https://www.careerexplorer.com/careers/back-end-developer/</url>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <!--Leadership Intro -->
+    <category>
+        <pattern>LEADERSHIP</pattern>
+        <template>
+            Leadership is a great skill to have! Which type of leader are you?
+            <button>
+                <text>Organizing and planning projects effectively to lead your team to victory!</text>
+                <postback>projectmanagermore</postback>
+            </button>
+            <button>
+                <text>Love of technology and people</text>
+                <postback>itmanagermore</postback>
+            </button>
+        </template>
+    </category>
+    
+    <!--Leadership Project Manager -->
+    <category>
+        <pattern>projectmanagermore</pattern>
+        <template>
+            Sounds like you would love being a Project Manager! They need to effectively organize a team
+            and resources to meet deadlines. I have provided a link for you if you would like additional information.
+            <card>
+                <title>What is a Project Manager?</title>
+                <image>https://www.yalwa.info/images/jobbenefits/benefit8.svg</image>
+                <button>
+                    <text>Learn More</text>
+                    <url>https://www.cio.com/article/230682/what-is-a-project-manager-the-lead-role-for-project-success.html</url>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <!--Leadership IT Manager -->
+    <category>
+        <pattern>itmanagermore</pattern>
+        <template>
+            Sounds like you would love being an IT Manager! They need to love managing and interacting with people just
+            as much as they love working with technology. I have provided a link for you if you would like additional information.
+            <card>
+                <title>What is an IT Manager?</title>
+                <image>https://www.yalwa.info/images/jobbenefits/benefit6.svg</image>
+                <button>
+                    <text>Learn More</text>
+                    <url>https://www.careerexplorer.com/careers/it-manager/</url>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <!--Tech Savvy Intro -->
+    <category>
+        <pattern>TECHNOLOGY</pattern>
+        <template>
+            So you love technology, eh? Very nice! Which part of technology to do you enjoy working with?
+            <button>
+                <text>Managing various applications and users access them</text>
+                <postback>systemsadminmore</postback>
+            </button>
+            <button>
+                <text>Configuring and maintaing how devices interact with eachother</text>
+                <postback>networkadminmore</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+    <!--Tech Savvy Systems Administrator -->
+    <category>
+        <pattern>systemsadminmore</pattern>
+        <template>
+            Sounds like you would love being a Systems Administrator! They handle the cofiguration and maintainence of various
+            applications their users work with on a daily basis. If you would like know more, I provided a link for you below!
+            <card>
+                <title>What is a Systems Administrator?</title>
+                <image>https://www.yalwa.info/images/jobbenefits/benefit2.svg</image>
+                <button>
+                    <text>Learn More</text>
+                    <url>https://www.coursera.org/articles/what-is-a-system-administrator-a-career-guide</url>
+                </button>
+            </card>
+        </template>
+    </category>
+    
+    
+    <!--Tech Savvy Network Administrator -->
+    <category>
+        <pattern>networkadminmore</pattern>
+        <template>
+            Sounds like you would love being a Network Administrator! They handle the configuration and maintainence of computer networks.
+            If you would like additional information, I provided a link for you below!
+            <card>
+                <title>What is a Network Administrator?</title>
+                <image>https://www.yalwa.info/images/jobbenefits/benefit4.svg</image>
+                <button>
+                    <text>Learn More</text>
+                    <url>https://www.coursera.org/articles/what-is-a-network-administrator-a-career-guide</url>
+                </button>
+            </card>
+        </template>
+    </category>
+
+
+</aiml>
